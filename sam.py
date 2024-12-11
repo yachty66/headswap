@@ -12,12 +12,28 @@ def show_anns(anns):
 
     img = np.ones((sorted_anns[0]['segmentation'].shape[0], sorted_anns[0]['segmentation'].shape[1], 4))
     img[:,:,3] = 0
-    for ann in sorted_anns:
+    
+    # Add numbers to each mask
+    for idx, ann in enumerate(sorted_anns):
         m = ann['segmentation']
         color_mask = np.concatenate([np.random.random(3), [0.35]])
         img[m] = color_mask
+        
+        # Calculate center of mass for the mask
+        y_indices, x_indices = np.where(m)
+        if len(y_indices) > 0 and len(x_indices) > 0:
+            center_y = int(np.mean(y_indices))
+            center_x = int(np.mean(x_indices))
+            
+            # Add text with white color and black edge
+            plt.text(center_x, center_y, str(idx+1), 
+                    fontsize=12, 
+                    color='white',
+                    bbox=dict(facecolor='black', alpha=0.5),
+                    ha='center', 
+                    va='center')
+    
     ax.imshow(img)
-
 image = cv2.imread('me.png')
 image = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 
