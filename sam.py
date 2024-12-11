@@ -51,8 +51,6 @@ sam.to(device=device)
 
 mask_generator = SamAutomaticMaskGenerator(sam)
 
-
-
 masks = mask_generator.generate(image)
 
 plt.figure(figsize=(20,20))
