@@ -2,8 +2,11 @@
 
 ## 1. Data Processing Pipeline
 - [ ] Semantic parsing (SCHP)
+    - semantically parsed source head and body with the code from https://colab.research.google.com/drive/1Bt8-epLDcwiPKKR4WL7-V-CoOOflbxft?usp=sharing - example outputs are saved at elon_semantic.png and jensen_semantic.png
 - [ ] Head/body mask separation
-- [ ] Basic visualization tools (to check if steps before are working)
+    - added code to notebook which generates head and body masks from the semantic parsing https://colab.research.google.com/drive/1Bt8-epLDcwiPKKR4WL7-V-CoOOflbxft#scrollTo=7IHtLfb13lQz
+- [ ] Blending layout
+    - 
 
 ## 3. Layout Generator
 - [ ] Basic generator architecture (takes source head and body, outputs layout)
