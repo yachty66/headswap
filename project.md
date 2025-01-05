@@ -30,3 +30,5 @@
 - [ ] Component integration
 - [ ] End-to-end testing
 - [ ] Performance optimization
+
+i need to go with blended diffusion. i can do it right here
