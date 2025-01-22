@@ -8,3 +8,4 @@ onnxruntime-gpu==1.14
 face-alignment==1.4.1
 imgaug==0.4.0
 numpy==1.23.1
+huggingface-hub

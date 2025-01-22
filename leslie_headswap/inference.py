@@ -177,6 +177,6 @@ if __name__ == "__main__":
     src_paths = ['./assets/5.jpg']
     tgt_paths = ['assets/fe54875c-2cf0-4147-b08a-80552a9f46be.jpg']
     
-    model.run(src_paths,tgt_paths,save_base='res-1125',crop_align=True,cat=True)
+    model.run(src_paths,tgt_paths,save_base='Enhanced-Face-Detection-Robustness',crop_align=True,cat=True)
     
    

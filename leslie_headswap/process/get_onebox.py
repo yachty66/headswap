@@ -42,7 +42,7 @@ def process_frame(video_paths,save_base,thresh):
             
             bboxes = detect_faces([img])[0]
             
-            bboxes = list(filter(lambda x:x[-1]>0.99,bboxes))
+            bboxes = list(filter(lambda x:x[-1]>0.95,bboxes))
 
             if len(bboxes) == 0:
                 continue 

@@ -4,9 +4,9 @@
 
 Tested on 11.7 cuda
 
-1. git clone https://github.com/yachty66/LeslieZhoa-Head-Swap.git
+1. git clone https://github.com/yachty66/headswap.git
 
-2. cd HeadSwap
+2. cd leslie_headswap
 
 3. pip install -r requirements.txt
 
