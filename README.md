@@ -68,5 +68,3 @@ python facefusion.py headless-run \
     -t target.jpg \
     -o ./output/result.jpg
 
-
-    s
