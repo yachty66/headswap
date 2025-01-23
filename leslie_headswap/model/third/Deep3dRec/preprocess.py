@@ -74,7 +74,13 @@ def align_img(img, lm, lm3D, mask=None, target_size=224., rescale_factor=102.):
 
     # processing the image
     img_new, lm_new, mask_new = resize_n_crop_img(img, lm, t, s, target_size=target_size, mask=mask)
-    trans_params = np.array([w0, h0, s, t[0], t[1]],dtype=np.float32)
+    
+    # Ensure t values are scalar
+    tx = float(t[0][0] if isinstance(t[0], np.ndarray) else t[0])
+    ty = float(t[1][0] if isinstance(t[1], np.ndarray) else t[1])
+    
+    # Create transformation parameters array with scalar values
+    trans_params = np.array([float(w0), float(h0), float(s), tx, ty], dtype=np.float32)
 
     return trans_params, img_new, lm_new, mask_new
 
