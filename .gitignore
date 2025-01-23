@@ -1,2 +1,10 @@
 leslie_headswap/pretrained_models/
+leslie_headswap/.cache
+leslie_headswap/__pycache__
 .cache
+ff/__pycache__
+ff/.assets
+ff/.caches
+ff/.jobs
+ff/.idea
+ff/.vscode
